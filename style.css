@@ -107,7 +107,7 @@
 #myButton {
     text-align: center;
     text-overflow: clip;
-    color: red;
+    color: rgb(0, 0, 0);
     position: fixed;
 }
 
