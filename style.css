@@ -10,7 +10,6 @@
     padding: 0;
     margin: 0;
     position: fixed;
-    /* Fixed to stay visible when scrolling */
     top: 10px;
     right: 20px;
     z-index: 2;
@@ -28,7 +27,6 @@
 /* Dropdown container */
 .dropdown {
     position: relative;
-    /* Ensure relative positioning for better control */
     top: 0;
     right: 0;
 }
@@ -148,14 +146,23 @@ body {
     /* Prevent horizontal scroll on mobile */
 }
 
-/* Header styling */
+body {
+    background: rgb(58, 58, 58);
+    color: white;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll on mobile */
+}
+
+/* Header */
 header {
     background-color: black;
     height: 70px;
     padding: 20px;
     text-align: center;
     position: relative;
-    /* Changed to relative for better control in mobile */
 }
 
 header a {
@@ -164,28 +171,7 @@ header a {
     text-transform: uppercase;
     margin-top: 40px;
     display: block;
-    /* Make header links block for better spacing */
 }
-
-header .mobile {
-    display: none;
-}
-
-header .logo a {
-    background-image: url(Img/stonks.jpeg);
-    background-size: 300px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    position: absolute;
-    /* Changed to absolute for precise positioning */
-    height: 80px;
-    width: 300px;
-    top: -20.5%;
-    left: 0.5%;
-    text-indent: -9999999px;
-    /* Keeps text hidden */
-}
-
 
 nav ul {
     margin: 0;
@@ -198,12 +184,105 @@ nav li {
     margin-right: 20px;
 }
 
-/* RESPONSIVE RULES */
+/* Footer */
+footer {
+    background: black;
+    color: gray;
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
+}
 
+/* PC STYLES */
+@media screen and (min-width: 716px) {
+    .dropbtn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 30px;
+        width: 35px;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    .bar {
+        width: 35px;
+        height: 4px;
+        background-color: #04AA6D;
+        margin: 4px;
+        transition: 0.3s;
+    }
+
+    .dropdown {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 80vw;
+        max-width: 300px;
+        background-color: #ffffff;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        overflow-y: auto;
+        padding-top: 40px;
+    }
+
+    header .logo a {
+        background-image: url(Img/stonks.jpeg);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: absolute;
+        height: 80px;
+        width: 300px;
+        top: -20.5%;
+        left: 0.5%;
+        text-indent: -9999999px;
+    }
+
+    .features {
+        background: white;
+        color: gray;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .features figure {
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 200px;
+    }
+
+    .features figure img {
+        border: 1px solid white;
+        border-radius: 50%;
+        box-shadow: gray 0 0 10px;
+        width: 200px;
+    }
+}
+
+/* MOBILE STYLES */
 @media screen and (max-width: 715px) {
     header {
         height: 100px;
-        /* Adjust header height for smaller screens */
         background-position: center;
         padding: 10px 20px;
     }
@@ -215,66 +294,63 @@ nav li {
         right: 15px;
     }
 
+    .bar {
+        width: 30px;
+        /* Slightly smaller bars for the hamburger icon */
+        height: 3px;
+    }
+
     .dropdown-content {
         width: 100%;
-        /* Full width dropdown on small screens */
         max-width: none;
-        /* Remove max-width on smaller devices */
         padding-top: 50px;
-        /* Space out items to not overlap with controls */
     }
-}
 
-@media screen and (max-width: 500px) {
-    header {
-        height: 80px;
-        padding: 10px 10px;
-        background-position: center;
+    .dropdown.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .dropdown.active .bar:nth-child(2) {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    .dropdown.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
     }
 
     .dropdown-content a {
         padding: 10px 8px;
-        /* Adjust padding for better spacing on very small screens */
+        font-size: 14px;
+        border-bottom: 1px solid #ddd;
+        margin: 0;
     }
 
-    .bar {
-        width: 30px;
-        /* Slightly smaller bars for the hamburger icon */
+    #icons {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%, -50%);
+        display: flex;
+        gap: 10px;
     }
-}
 
-/* FEATURES */
+    #icons img {
+        width: 42px;
+        height: 42px;
+    }
 
-.features {
-    background: white;
-    color: gray;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+    .features {
+        flex-direction: column;
+        padding: 10px;
+    }
 
-.features figure {
-    margin: auto;
-    padding: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 200px;
-}
+    .features figure {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-.features figure img {
-    border: 1px solid white;
-    border-radius: 50%;
-    box-shadow: gray 0 0 10px;
-    width: 200px;
-}
-
-/* FOOTER */
-
-footer {
-    background: black;
-    color: gray;
-    font-size: 12px;
-    padding: 20px 20px;
-    text-align: center;
+    .features figure img {
+        width: 100px;
+    }
 }
