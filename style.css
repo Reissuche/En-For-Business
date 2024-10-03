@@ -1,14 +1,4 @@
-/* COMMON STYLES (APPLIED TO BOTH PC AND MOBILE) */
-body {
-    background: rgb(58, 58, 58);
-    color: white;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
-}
-
-/* Header */
+/* HEADER */
 header {
     background-color: black;
     height: 70px;
@@ -25,6 +15,15 @@ header a {
     display: block;
 }
 
+/* BODY */
+body {
+    background: rgb(58, 58, 58);
+    color: white;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
@@ -36,7 +35,46 @@ nav li {
     margin-right: 20px;
 }
 
-/* Dropdown Button and Hamburger Menu */
+/* FOOTER */
+footer {
+    background: black;
+    color: gray;
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* LOGO */
+.logo a {
+    background-image: url(Img/stonks.jpeg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    height: 80px;
+    width: 300px;
+    top: -20.5%;
+    left: 0.5%;
+    text-indent: -9999999px;
+}
+
+/* SOCIALS */
+#icons {
+    position: absolute;
+    /*if page long rel else absolute*/
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%, -50%);
+    display: flex;
+    gap: 10px;
+}
+
+#icons img {
+    width: 42px;
+    height: 42px;
+}
+
+/*MENU DROPDOWN*/
 .dropbtn {
     background-color: transparent;
     border: none;
@@ -62,7 +100,6 @@ nav li {
     transition: 0.3s;
 }
 
-/* Dropdown Content */
 .dropdown {
     position: relative;
     top: 0;
@@ -70,10 +107,10 @@ nav li {
 }
 
 .dropdown-content {
-    display: none;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
+    /* Hidden off-screen initially */
     height: 100vh;
     width: 80vw;
     max-width: 300px;
@@ -82,6 +119,8 @@ nav li {
     z-index: 1;
     overflow-y: auto;
     padding-top: 40px;
+    transition: right .5s ease;
+    /* Slide effect */
 }
 
 .dropdown-content a {
@@ -102,7 +141,11 @@ nav li {
     background-color: #ddd;
 }
 
-/* Hamburger animation when active */
+.dropdown.active .dropdown-content {
+    right: 0;
+    /* Slide in */
+}
+
 .dropdown.active .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-6px, 6px);
 }
@@ -116,139 +159,90 @@ nav li {
     transform: rotate(45deg) translate(-6px, -6px);
 }
 
-/* Footer */
-footer {
-    background: black;
-    color: gray;
-    font-size: 12px;
-    padding: 20px;
-    text-align: center;
-}
 
-#icons {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%, -50%);
-    display: flex;
-    gap: 10px;
-}
+/*REST*/
 
-#icons img {
-    width: 42px;
-    height: 42px;
-}
-
-/* Additional Element Styles */
 #myButton {
+    /* button stuff (NOT USED)*/
     text-align: center;
     text-overflow: clip;
     color: rgb(0, 0, 0);
     position: fixed;
 }
 
-#para1 {
-    text-align: center;
-    color: black;
-}
-
 #paraMenu {
+    /* WEBSITE header (IN USE)*/
     text-align: center;
     color: white;
     position: relative;
     top: -10%;
 }
 
-/* FEATURES */
-.features {
-    background: white;
-    color: gray;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+/* styles for desktop devices */
+@media only screen and (min-width: 992px) {}
 
-.features figure {
-    margin: auto;
-    padding: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 200px;
-}
+/* styles for tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
 
-.features figure img {
-    border: 1px solid white;
-    border-radius: 50%;
-    box-shadow: gray 0 0 10px;
-    width: 200px;
-}
+/* styles for mobile devices */
+@media only screen and (max-width: 767px) {
 
-/* PC STYLES */
-@media screen and (min-width: 716px) {
+    /* HEADER */
     header {
-        height: 70px;
+        background-color: black;
+        height: 7.5%;
         padding: 20px;
-        background-position: center;
+        text-align: center;
+        position: relative;
     }
 
-    header .logo a {
-        background-image: url(Img/stonks.jpeg);
-        background-size: 300px;
-        background-repeat: no-repeat;
-        display: inline-block;
-        position: absolute;
-        height: 80px;
-        width: 300px;
-        top: -20.5%;
-        left: 0.5%;
-        text-indent: -9999999px;
-    }
-}
-
-/* MOBILE STYLES */
-@media screen and (max-width: 715px) {
-    header {
-        height: 100px;
-        padding: 10px 20px;
+    header a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-top: 80px;
+        display: block;
     }
 
+    /* BODY */
+    body {
+        background: rgb(58, 58, 58);
+        color: white;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        /* Prevent horizontal scroll on mobile */
+    }
+
+    /*MENU DROPDOWN*/
     .dropbtn {
-        top: 15px;
-        right: 15px;
+        height: 39px;
+        width: 43.75px;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 5%;
+        right: 2.5%;
     }
 
     .bar {
-        width: 30px;
-        height: 3px;
+        width: 43.75px;
+        height: 5px;
+        margin: 5px;
     }
 
-    .dropdown-content {
-        width: 100%;
-        max-width: none;
-        padding-top: 50px;
+    /* LOGO */
+    .logo a {
+        background-size: 150px;
+        height: 80px;
+        width: 300px;
+        top: -60.5%;
+        left: 1.5%;
     }
 
-    #icons {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%, -50%);
-        display: flex;
-        gap: 10px;
-    }
-
-    .features {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .features figure {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .features figure img {
-        width: 100px;
+    /* website header*/
+    #paraMenu {
+        font-size: 20px;
     }
 }
