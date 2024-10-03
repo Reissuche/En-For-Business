@@ -33,20 +33,13 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    display: flex; /* Keep items in a row */
+    align-items: center; /* Center items vertically */
 }
 
 nav li {
     display: inline-block;
     margin-right: 20px;
-}
-
-/* FOOTER */
-footer {
-    background: black;
-    color: gray;
-    font-size: 12px;
-    padding: 20px;
-    text-align: center;
 }
 
 /* LOGO */
@@ -59,31 +52,17 @@ footer {
 }
 
 .logo img {
+    position: relative;
     max-width: 100px;  /* Adjust the size */
     height: auto;
-    position: fixed;
-    top: 10px;
-    left: 5px;
-}
-
-/* SOCIALS */
-#icons {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%, -50%);
-    display: flex;
-    gap: 10px;
-}
-
-#icons img {
-    width: 42px;
-    height: 42px;
+    left: -10px;
+    top: -55px;
 }
 
 /*MENU DROPDOWN*/
 .dropbtn {
     background-color: transparent;
+    position: relative;
     border: none;
     cursor: pointer;
     display: flex;
@@ -93,9 +72,8 @@ footer {
     width: 35px;
     padding: 0;
     margin: 0;
-    position: fixed;
-    top: 35px;
-    right: 20px;
+    top: -50px;
+    right: 1;
     z-index: 2;
 }
 
@@ -108,9 +86,7 @@ footer {
 }
 
 .dropdown {
-    position: relative;
-    top: 0;
-    right: 0;
+    margin-left: auto; /* Pushes the dropdown to the right */
 }
 
 .dropdown-content {
@@ -165,7 +141,6 @@ footer {
     transform: rotate(45deg) translate(-6px, -6px);
 }
 
-/*REST*/
 /* General styling */
 ul {
     list-style-type: none;
@@ -183,7 +158,6 @@ li {
     text-align: center;
     color: white;
     font-size: 22px;
-    top: 50px;
 }
 
 #subtext {
@@ -192,8 +166,39 @@ li {
     font-family: sans-serif;
 }
 
-@media only screen and (max-width: 750px) {
-    .logo img {
-        width: 150px; /* Resize the logo for smaller screens */
+/* CONTENT STYLES */
+.content {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    padding: 20px;
+    gap: 20px; 
+}
+
+.text-block {
+    flex: 1; 
+    padding: 20px; 
+}
+
+.image-container {
+    flex: 1; 
+    text-align: left; 
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto; 
+    width: 450px; 
+}
+
+
+@media only screen and (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack the text and image vertically on small screens */
+    }
+
+    .image-container img {
+        width: 100%; /* Let the image take full width of the container on smaller screens */
+        text-align: center;
     }
 }
