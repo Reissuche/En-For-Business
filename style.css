@@ -2,16 +2,21 @@
 header {
     background-color: black;
     height: 70px;
-    padding: 20px;
-    text-align: center;
+    padding: 10px 20px; /* Adjusted padding for better alignment */
     position: relative;
+}
+
+.header-content {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out logo and menu */
+    align-items: center; /* Center items vertically */
+    height: 100%; /* Make sure it takes full height of header */
 }
 
 header a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    margin-top: 40px;
     display: block;
 }
 
@@ -45,23 +50,25 @@ footer {
 }
 
 /* LOGO */
+.logo {
+    display: inline-block; /* Keep logo inline */
+}
+
 .logo a {
-    background-image: url(Img/stonks.jpeg);
-    background-size: 300px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    position: absolute;
-    height: 80px;
-    width: 300px;
-    top: -20.5%;
-    left: 0.5%;
-    text-indent: -9999999px;
+    color: white; /* Color for logo text */
+}
+
+.logo img {
+    max-width: 100px;  /* Adjust the size */
+    height: auto;
+    position: fixed;
+    top: 10px;
+    left: 5px;
 }
 
 /* SOCIALS */
 #icons {
     position: absolute;
-    /*if page long rel else absolute*/
     left: 50%;
     bottom: 0;
     transform: translateX(-50%, -50%);
@@ -109,8 +116,7 @@ footer {
 .dropdown-content {
     position: fixed;
     top: 0;
-    right: -100%;
-    /* Hidden off-screen initially */
+    right: -100%;/* Hidden off-screen initially */
     height: 100vh;
     width: 80vw;
     max-width: 300px;
@@ -119,8 +125,8 @@ footer {
     z-index: 1;
     overflow-y: auto;
     padding-top: 40px;
-    transition: right .5s ease;
-    /* Slide effect */
+    transition: right .5s ease; /* Slide effect */
+    text-align: center;
 }
 
 .dropdown-content a {
@@ -159,90 +165,35 @@ footer {
     transform: rotate(45deg) translate(-6px, -6px);
 }
 
-
 /*REST*/
+/* General styling */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
 
-#myButton {
-    /* button stuff (NOT USED)*/
-    text-align: center;
-    text-overflow: clip;
-    color: rgb(0, 0, 0);
-    position: fixed;
+li {
+    margin-right: 20px;
 }
 
 #paraMenu {
-    /* WEBSITE header (IN USE)*/
     text-align: center;
     color: white;
-    position: relative;
-    top: -10%;
+    font-size: 22px;
+    top: 50px;
 }
 
-/* styles for desktop devices */
-@media only screen and (min-width: 992px) {}
+#subtext {
+    color: #04AA6D;
+    font-size: 25px;
+    font-family: sans-serif;
+}
 
-/* styles for tablet devices */
-@media only screen and (min-width: 768px) and (max-width: 991px) {}
-
-/* styles for mobile devices */
-@media only screen and (max-width: 767px) {
-
-    /* HEADER */
-    header {
-        background-color: black;
-        height: 7.5%;
-        padding: 20px;
-        text-align: center;
-        position: relative;
-    }
-
-    header a {
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-        margin-top: 80px;
-        display: block;
-    }
-
-    /* BODY */
-    body {
-        background: rgb(58, 58, 58);
-        color: white;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        /* Prevent horizontal scroll on mobile */
-    }
-
-    /*MENU DROPDOWN*/
-    .dropbtn {
-        height: 39px;
-        width: 43.75px;
-        padding: 0;
-        margin: 0;
-        position: fixed;
-        top: 5%;
-        right: 2.5%;
-    }
-
-    .bar {
-        width: 43.75px;
-        height: 5px;
-        margin: 5px;
-    }
-
-    /* LOGO */
-    .logo a {
-        background-size: 150px;
-        height: 80px;
-        width: 300px;
-        top: -60.5%;
-        left: 1.5%;
-    }
-
-    /* website header*/
-    #paraMenu {
-        font-size: 20px;
+@media only screen and (max-width: 750px) {
+    .logo img {
+        width: 150px; /* Resize the logo for smaller screens */
     }
 }
