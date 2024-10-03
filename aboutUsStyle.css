@@ -1,3 +1,123 @@
+/* HEADER */
+header {
+    background-color: black;
+    height: 70px;
+    padding: 10px 20px; /* Adjusted padding for better alignment */
+    position: relative;
+}
+
+.header-content {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out logo and menu */
+    align-items: center; /* Center items vertically */
+    height: 100%; /* Make sure it takes full height of header */
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+}
+/* LOGO */
+.logo {
+    display: inline-block; /* Keep logo inline */
+}
+
+.logo a {
+    color: white; /* Color for logo text */
+}
+
+.logo img {
+    position: relative;
+    max-width: 100px;  /* Adjust the size */
+    height: auto;
+    left: -10px;
+    top: -55px;
+}
+
+/*MENU DROPDOWN*/
+.dropbtn {
+    background-color: transparent;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 35px;
+    padding: 0;
+    margin: 0;
+    top: -50px;
+    right: 1;
+    z-index: 2;
+}
+
+.bar {
+    width: 35px;
+    height: 4px;
+    background-color: #04AA6D;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.dropdown {
+    margin-left: auto; /* Pushes the dropdown to the right */
+}
+
+.dropdown-content {
+    position: fixed;
+    top: 0;
+    right: -100%;/* Hidden off-screen initially */
+    height: 100vh;
+    width: 80vw;
+    max-width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow-y: auto;
+    padding-top: 40px;
+    transition: right .5s ease; /* Slide effect */
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 11px 10px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    font-size: 14px;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown.active .dropdown-content {
+    right: 0;
+    /* Slide in */
+}
+
+.dropdown.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.dropdown.active .bar:nth-child(2) {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.dropdown.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
 h1, h2 {
     color: black;
     text-align: center;
