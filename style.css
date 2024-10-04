@@ -54,18 +54,24 @@ footer {
 /* LOGO */
 .logo {
     display: inline-block; /* Keep logo inline */
+    position: absolute; /* Allows free positioning */
+    top: 10px; /* Adjust as needed for vertical spacing */
+    left: 20px; /* Adjust for horizontal spacing */
 }
 
 .logo a {
-    color: white; /* Color for logo text */
+    color: #111;
+    display: inline; /* Change to inline to reduce hitbox */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
 }
 
 .logo img {
-    position: relative;
-    max-width: 100px;  /* Adjust the size */
+    max-width: 100px;  
     height: auto;
-    left: -10px;
-    top: -55px;
+    /* Consider removing the left and top positioning */
+    /* left: -10px; */
+    /* top: -55px; */
 }
 
 /* Social Icons */
@@ -100,7 +106,7 @@ footer {
     width: 35px;
     padding: 0;
     margin: 0;
-    top: -50px;
+    top: -40px;
     right: 1;
     z-index: 2;
 }
@@ -246,32 +252,34 @@ li {
 
 .image-container {
     flex: 1; 
-    text-align: left; 
+    text-align: right; 
 }
 
 .image-container img {
     max-width: 100%;
     height: auto; 
-    width: 450px; 
+    width: 500px; 
 }
 
 
 @media only screen and (max-width: 768px) {
     .content {
-        flex-direction: column; /* Stack the text and image vertically on small screens */
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 0; /* Remove padding */
+    }
+
+    .image-container {
+        width: 100%; /* Take full width */
+        text-align: center; /* Center image */
     }
 
     .image-container img {
-        width: 100%; /* Let the image take full width of the container on smaller screens */
-        text-align: center;
+        width: 100vw; /* Make image full width of viewport */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 100vh; /* Optional: limit height to viewport */
     }
 
-    .team-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-member {
-        margin-bottom: 20px;
+    .text-block {
+        padding: 10px; /* Adjust padding for text */
     }
 }
