@@ -2,16 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpeg" href="Img/stonks.jpeg">
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
     <title>BROOM</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="Img/stonks.jpeg" type="Img/gif" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 </head>
+<!-- body -->
 
-<body>
-    <header>
-        <h1 id="paraMenu">BROOM</h1>
+<header>
+    <h1 id="paraMenu">App Name</h1>
+    <div>
+        <li class="dropdown">
+            <button class="dropbtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Service</a>
+                <a href="about.html">About</a>
+            </div>
+        </li>
+    </div>
+
+    <div>
         <nav>
             <ul>
                 <li>
@@ -19,33 +51,106 @@
                         <img src="Img/stonks.jpeg" alt="Website Logo">
                     </a>
                 </li>
-                <li class="dropdown">
-                    <button class="dropbtn">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="index.html">Home</a>
-                        <a href="menu.html">Menu</a>
-                        <a href="about.html">About</a>
-                    </div>
-                </li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <div class="content">
-        <div class="text-block">
-            <p id="subtext">This is only a test website which is in development by someone who doesn't know how to
-                program.</p>
-        </div>
-        <div class="image-container">
-            <img src="Img/brain.gif" alt="full brain power">
+<body class="main-layout">
+
+    <!-- top -->
+    <div class="full_bg">
+        <div class="slider_main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- carousel code -->
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <!-- first slide -->
+                                <div class="carousel-item active">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-5">
+                                                <div class="board">
+                                                    <h3>
+                                                        Help<br> Me<br> Please
+                                                    </h3>
+                                                    <div class="link_btn">
+                                                        <a class="read_more" href="Javascript:void(0)">Read Less/Nothing
+                                                            <span></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="banner_img">
+                                                    <figure><img class="img_responsive" src="Img/placeholder.webp"
+                                                            width="50%" height="50%">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- second slide -->
+                                <div class="carousel-item">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-5">
+                                                <div class="board">
+                                                    <h3>
+                                                        This<br> Won't<br> Work
+                                                    </h3>
+                                                    <div class="link_btn">
+                                                        <a class="read_more" href="Javascript:void(0)">Read Less/Nothing
+                                                            <span></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="banner_img">
+                                                    <figure><img class="img_responsive" src="Img/placeholder.webp"
+                                                            width="50%" height="50%">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- controls -->
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script src="app.js"></script>
+    <!-- end banner -->
+    <!-- end our class -->
+    <!-- Javascript files-->
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-3.0.0.min.js"></script>
+    <!-- sidebar -->
+    <script src="JS/custom.js"></script>
+    <script src="JS/app.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

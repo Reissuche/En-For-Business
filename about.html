@@ -3,16 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/app.js"></script>
     <link rel="icon" type="image/jpeg" href="Img/stonks.jpeg">
     <title>About Us - BROOM</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="Img/stonks.jpeg" type="Img/gif" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 </head>
+<header>
+    <h1 id="paraMenu">About</h1>
+    <div>
+        <li class="dropdown">
+            <button class="dropbtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Service</a>
+                <a href="about.html">About</a>
+            </div>
+        </li>
+    </div>
 
-<body>
-    <header>
-        <h1 id="paraMenu">About Us</h1>
+    <div>
         <nav>
             <ul>
                 <li>
@@ -20,60 +48,77 @@
                         <img src="Img/stonks.jpeg" alt="Website Logo">
                     </a>
                 </li>
-                <li class="dropdown">
-                    <button class="dropbtn">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="index.html">Home</a>
-                        <a href="menu.html">Menu</a>
-                        <a href="about.html">About</a>
-                    </div>
-                </li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <section class="about-section">
-        <div class="intro">
-            <h2>Welcome to BROOM</h2>
-            <p>We are a passionate team committed to bringing innovative solutions to our customers. From creative ideas
-                to practical execution,
-                we thrive on delivering the best results. Our journey started with a vision to change the game, and
-                we've been evolving ever since.</p>
-        </div>
-
-        <div class="history">
-            <h2>Our Story</h2>
-            <p>BROOM was founded in 2024 as a small business project for an English business course. What began as a
-                simple test website soon became something much bigger.
-                Through hard work and dedication, we try to turn this project into a dynamic platform for growth and
-                learning.</p>
-        </div>
-
-        <div class="team">
-            <h2>Meet the Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="Img/team.png" alt="Team Member 1">
-                    <h3>ANAL-M</h3>
-                    <p>Founder & CEO</p>
+<body>
+    <!-- about -->
+    <div class="about">
+        <div class="container-fluid">
+            <div class="row d_flex">
+                <div class="col-md-8 offset-md-0">
+                    <div class="titlepage text_align_center">
+                        <h2>Welcome to BROOM</h2>
+                        <p>We are a passionate team committed to bringing innovative solutions to our customers.
+                            From creative ideas
+                            to practical execution,
+                            we thrive on delivering the best results. Our journey started with a vision to change
+                            the game, and
+                            we've been evolving ever since.
+                        </p>
+                    </div>
                 </div>
-                <!-- <div class="team-member">
-                    <img src="Img/team-member.jpg" alt="Team Member 2">
-                    <h3>ME</h3>
-                    <p>Lead Developer</p>
-                </div> -->
             </div>
         </div>
-    </section>
+    </div>
+    <div class="about">
+        <div class="container-fluid">
+            <div class="row d_flex">
+                <div class="col-md-8 offset-md-0">
+                    <div class="titlepage text_align_center">
+                        <h2>Our Story</h2>
+                        <p>BROOM was founded in 2024 as a small business project for an English business course. What
+                            began as a
+                            simple test website soon became something much bigger.
+                            Through hard work and dedication, we try to turn this project into a dynamic platform for
+                            growth and
+                            learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="container-fluid">
+            <div class="row d_flex">
+                <div class="col-md-8 offset-md-0">
+                    <div class="titlepage text_align_center">
+                        <h2>Meet the Team</h2>
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <img src="Img/team.png" alt="Team Member 1">
+                                <h3>ANAL-M</h3>
+                                <p>Founder & CEO</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="Img/team.png" alt="Team Member 2">
+                                <h3>ME</h3>
+                                <p>Lead Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
 
     <section class="socials">
         <h2>Connect with Us</h2>
         <div id="icons">
-            <a href="https://github.com/codemesomething?tab=repositories">
+            <a href="https://github.com">
                 <img src="Img/GitHub.png" alt="GitHub">
             </a>
             <a href="https://www.instagram.com">
@@ -85,6 +130,16 @@
     <footer>
         <p>&copy; 2024 BROOM. All rights reserved.</p>
     </footer>
+
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <!-- sidebar -->
+    <script src="js/custom.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
