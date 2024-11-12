@@ -236,7 +236,7 @@ button.next:hover {
     /* Rounded edges for input */
     padding-right: 40px;
     /* Extra padding on the right side for button space */
-    margin-top: 10%;
+    margin-top: 0%;
 }
 
 .newsletter button {
@@ -298,7 +298,7 @@ button.next:hover {
         display: none;
         transition: all 0.3s ease;
     }
-    
+
     .navbar-collapse.show {
         display: block;
     }
@@ -677,7 +677,6 @@ button.next:hover {
         center center;
     background-repeat: no-repeat;
 }
-
 
 /*** Testimonial ***/
 .testimonial-carousel .testimonial-item {
